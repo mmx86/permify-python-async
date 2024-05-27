@@ -5,12 +5,12 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**bundle_run**](DataApi.md#bundle_run) | **POST** /v1/tenants/{tenant_id}/data/run-bundle | run bundle
-[**data_attributes_read**](DataApi.md#data_attributes_read) | **POST** /v1/tenants/{tenant_id}/data/attributes/read | read attribute(s)
+[**data_attributes_read**](DataApi.md#data_attributes_read) | **POST** /v1/tenants/{tenant_id}/data/attributes/read | read attributes
 [**data_delete**](DataApi.md#data_delete) | **POST** /v1/tenants/{tenant_id}/data/delete | delete data
-[**data_relationships_read**](DataApi.md#data_relationships_read) | **POST** /v1/tenants/{tenant_id}/data/relationships/read | read relation tuple(s)
-[**data_write**](DataApi.md#data_write) | **POST** /v1/tenants/{tenant_id}/data/write | create data
+[**data_relationships_read**](DataApi.md#data_relationships_read) | **POST** /v1/tenants/{tenant_id}/data/relationships/read | read relationships
+[**data_write**](DataApi.md#data_write) | **POST** /v1/tenants/{tenant_id}/data/write | write data
 [**relationships_delete**](DataApi.md#relationships_delete) | **POST** /v1/tenants/{tenant_id}/relationships/delete | delete relationships
-[**relationships_write**](DataApi.md#relationships_write) | **POST** /v1/tenants/{tenant_id}/relationships/write | create new relationships
+[**relationships_write**](DataApi.md#relationships_write) | **POST** /v1/tenants/{tenant_id}/relationships/write | write relationships
 
 
 # **bundle_run**
@@ -39,7 +39,7 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | 
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.BundleRunRequest() # BundleRunRequest | 
 
     try:
@@ -58,7 +58,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**|  | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**BundleRunRequest**](BundleRunRequest.md)|  | 
 
 ### Return type
@@ -86,7 +86,7 @@ No authorization required
 # **data_attributes_read**
 > AttributeReadResponse data_attributes_read(tenant_id, body)
 
-read attribute(s)
+read attributes
 
 ### Example
 
@@ -109,11 +109,11 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant from which the attributes are being read.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.DataAttributesReadRequest() # DataAttributesReadRequest | 
 
     try:
-        # read attribute(s)
+        # read attributes
         api_response = await api_instance.data_attributes_read(tenant_id, body)
         print("The response of DataApi->data_attributes_read:\n")
         pprint(api_response)
@@ -128,7 +128,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant from which the attributes are being read. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataAttributesReadRequest**](DataAttributesReadRequest.md)|  | 
 
 ### Return type
@@ -179,7 +179,7 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant from which the data will be deleted.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.DataDeleteRequest() # DataDeleteRequest | 
 
     try:
@@ -198,7 +198,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant from which the data will be deleted. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataDeleteRequest**](DataDeleteRequest.md)|  | 
 
 ### Return type
@@ -226,7 +226,7 @@ No authorization required
 # **data_relationships_read**
 > RelationshipReadResponse data_relationships_read(tenant_id, body)
 
-read relation tuple(s)
+read relationships
 
 ### Example
 
@@ -249,11 +249,11 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant for which relationships are read.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.DataRelationshipsReadRequest() # DataRelationshipsReadRequest | 
 
     try:
-        # read relation tuple(s)
+        # read relationships
         api_response = await api_instance.data_relationships_read(tenant_id, body)
         print("The response of DataApi->data_relationships_read:\n")
         pprint(api_response)
@@ -268,7 +268,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant for which relationships are read. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataRelationshipsReadRequest**](DataRelationshipsReadRequest.md)|  | 
 
 ### Return type
@@ -296,7 +296,7 @@ No authorization required
 # **data_write**
 > DataWriteResponse data_write(tenant_id, body)
 
-create data
+write data
 
 ### Example
 
@@ -319,11 +319,11 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant for which data is written.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.DataWriteRequest() # DataWriteRequest | 
 
     try:
-        # create data
+        # write data
         api_response = await api_instance.data_write(tenant_id, body)
         print("The response of DataApi->data_write:\n")
         pprint(api_response)
@@ -338,7 +338,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant for which data is written. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataWriteRequest**](DataWriteRequest.md)|  | 
 
 ### Return type
@@ -389,7 +389,7 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | 
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.RelationshipDeleteRequest() # RelationshipDeleteRequest | 
 
     try:
@@ -408,7 +408,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**|  | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**RelationshipDeleteRequest**](RelationshipDeleteRequest.md)|  | 
 
 ### Return type
@@ -436,7 +436,7 @@ No authorization required
 # **relationships_write**
 > RelationshipWriteResponse relationships_write(tenant_id, body)
 
-create new relationships
+write relationships
 
 ### Example
 
@@ -459,11 +459,11 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | Unique identifier for the tenant with specific constraints.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.RelationshipsWriteRequest() # RelationshipsWriteRequest | 
 
     try:
-        # create new relationships
+        # write relationships
         api_response = await api_instance.relationships_write(tenant_id, body)
         print("The response of DataApi->relationships_write:\n")
         pprint(api_response)
@@ -478,7 +478,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| Unique identifier for the tenant with specific constraints. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**RelationshipsWriteRequest**](RelationshipsWriteRequest.md)|  | 
 
 ### Return type

@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tenants_create**](TenancyApi.md#tenants_create) | **POST** /v1/tenants/create | create new tenant
+[**tenants_create**](TenancyApi.md#tenants_create) | **POST** /v1/tenants/create | create tenant
 [**tenants_delete**](TenancyApi.md#tenants_delete) | **DELETE** /v1/tenants/{id} | delete tenant
 [**tenants_list**](TenancyApi.md#tenants_list) | **POST** /v1/tenants/list | list tenants
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **tenants_create**
 > TenantCreateResponse tenants_create(body)
 
-create new tenant
+create tenant
 
 ### Example
 
@@ -38,7 +38,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     body = permify_async.TenantCreateRequest() # TenantCreateRequest | TenantCreateRequest is the message used for the request to create a tenant.
 
     try:
-        # create new tenant
+        # create tenant
         api_response = await api_instance.tenants_create(body)
         print("The response of TenancyApi->tenants_create:\n")
         pprint(api_response)

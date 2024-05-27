@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**watch_watch**](WatchApi.md#watch_watch) | **POST** /v1/tenants/{tenant_id}/watch | 
+[**watch_watch**](WatchApi.md#watch_watch) | **POST** /v1/tenants/{tenant_id}/watch | watch changes
 
 
 # **watch_watch**
 > StreamResultOfWatchResponse watch_watch(tenant_id, body)
 
-
+watch changes
 
 ### Example
 
@@ -33,10 +33,11 @@ configuration = permify_async.Configuration(
 async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.WatchApi(api_client)
-    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify_async.WatchWatchRequest() # WatchWatchRequest | 
 
     try:
+        # watch changes
         api_response = await api_instance.watch_watch(tenant_id, body)
         print("The response of WatchApi->watch_watch:\n")
         pprint(api_response)
@@ -51,7 +52,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| Identifier of the tenant, required, and must match the pattern \&quot;[a-zA-Z0-9-,]+\&quot;, max 64 bytes. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**WatchWatchRequest**](WatchWatchRequest.md)|  | 
 
 ### Return type
