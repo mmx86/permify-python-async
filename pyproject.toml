@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "permify_async"
-version = "1.0.0"
+version = "1.0.16"
 description = "Permify API"
 authors = ["API Support <hello@permify.co>"]
 license = "Apache-2.0 license"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+repository = "https://github.com/mmx86/python-async-python"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Permify API"]
 include = ["permify_async/py.typed"]
 
