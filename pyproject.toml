@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "permify_async"
-version = "1.0.20"
+version = "1.0.21"
 description = "Permify API"
 authors = ["API Support <hello@permify.co>"]
 license = "Apache-2.0 license"
