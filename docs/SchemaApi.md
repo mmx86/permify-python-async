@@ -90,8 +90,8 @@ partially update your authorization model
 
 ```python
 import permify_async
-from permify_async.models.it_contains_the_tenant_id_to_identify_the_tenant_and_metadata_of_the_schema_to_be_edited_with_the_corresponding_edits_to_various_entities import ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
 from permify_async.models.schema_partial_write_response import SchemaPartialWriteResponse
+from permify_async.models.schemas_partial_write_request import SchemasPartialWriteRequest
 from permify_async.rest import ApiException
 from pprint import pprint
 
@@ -107,7 +107,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.
-    body = permify_async.ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities() # ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities | 
+    body = permify_async.SchemasPartialWriteRequest() # SchemasPartialWriteRequest | 
 
     try:
         # partially update your authorization model
@@ -126,7 +126,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| tenant_id is a string that identifies the tenant. It must match the pattern \&quot;[a-zA-Z0-9-,]+\&quot;, be a maximum of 64 bytes, and must not be empty. | 
- **body** | [**ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities**](ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities.md)|  | 
+ **body** | [**SchemasPartialWriteRequest**](SchemasPartialWriteRequest.md)|  | 
 
 ### Return type
 

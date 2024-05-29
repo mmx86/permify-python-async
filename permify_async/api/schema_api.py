@@ -19,12 +19,12 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
-from permify_async.models.it_contains_the_tenant_id_to_identify_the_tenant_and_metadata_of_the_schema_to_be_edited_with_the_corresponding_edits_to_various_entities import ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
 from permify_async.models.schema_list_response import SchemaListResponse
 from permify_async.models.schema_partial_write_response import SchemaPartialWriteResponse
 from permify_async.models.schema_read_response import SchemaReadResponse
 from permify_async.models.schema_write_response import SchemaWriteResponse
 from permify_async.models.schemas_list_request import SchemasListRequest
+from permify_async.models.schemas_partial_write_request import SchemasPartialWriteRequest
 from permify_async.models.schemas_read_request import SchemasReadRequest
 from permify_async.models.schemas_write_request import SchemasWriteRequest
 
@@ -332,7 +332,7 @@ class SchemaApi:
     async def schemas_partial_write(
         self,
         tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
-        body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities,
+        body: SchemasPartialWriteRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -352,7 +352,7 @@ class SchemaApi:
         :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+        :type body: SchemasPartialWriteRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -402,7 +402,7 @@ class SchemaApi:
     async def schemas_partial_write_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
-        body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities,
+        body: SchemasPartialWriteRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -422,7 +422,7 @@ class SchemaApi:
         :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+        :type body: SchemasPartialWriteRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -472,7 +472,7 @@ class SchemaApi:
     async def schemas_partial_write_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
-        body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities,
+        body: SchemasPartialWriteRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -492,7 +492,7 @@ class SchemaApi:
         :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+        :type body: SchemasPartialWriteRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of

@@ -67,7 +67,6 @@ from permify_async.models.expr import Expr
 from permify_async.models.expr_call import ExprCall
 from permify_async.models.function_type import FunctionType
 from permify_async.models.ident import Ident
-from permify_async.models.it_contains_the_tenant_id_to_identify_the_tenant_and_metadata_of_the_schema_to_be_edited_with_the_corresponding_edits_to_various_entities import ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
 from permify_async.models.leaf import Leaf
 from permify_async.models.list_type import ListType
 from permify_async.models.map_type import MapType
@@ -114,6 +113,7 @@ from permify_async.models.schema_read_request_metadata import SchemaReadRequestM
 from permify_async.models.schema_read_response import SchemaReadResponse
 from permify_async.models.schema_write_response import SchemaWriteResponse
 from permify_async.models.schemas_list_request import SchemasListRequest
+from permify_async.models.schemas_partial_write_request import SchemasPartialWriteRequest
 from permify_async.models.schemas_read_request import SchemasReadRequest
 from permify_async.models.schemas_write_request import SchemasWriteRequest
 from permify_async.models.select import Select
