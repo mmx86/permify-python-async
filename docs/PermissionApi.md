@@ -22,8 +22,8 @@ check api
 
 ```python
 import permify_async
+from permify_async.models.check_body import CheckBody
 from permify_async.models.permission_check_response import PermissionCheckResponse
-from permify_async.models.permissions_check_request import PermissionsCheckRequest
 from permify_async.rest import ApiException
 from pprint import pprint
 
@@ -39,7 +39,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.PermissionsCheckRequest() # PermissionsCheckRequest | 
+    body = permify_async.CheckBody() # CheckBody | 
 
     try:
         # check api
@@ -58,7 +58,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**PermissionsCheckRequest**](PermissionsCheckRequest.md)|  | 
+ **body** | [**CheckBody**](CheckBody.md)|  | 
 
 ### Return type
 
@@ -92,8 +92,8 @@ expand api
 
 ```python
 import permify_async
+from permify_async.models.permission_expand_body import PermissionExpandBody
 from permify_async.models.permission_expand_response import PermissionExpandResponse
-from permify_async.models.permissions_expand_request import PermissionsExpandRequest
 from permify_async.rest import ApiException
 from pprint import pprint
 
@@ -109,7 +109,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.PermissionsExpandRequest() # PermissionsExpandRequest | 
+    body = permify_async.PermissionExpandBody() # PermissionExpandBody | 
 
     try:
         # expand api
@@ -128,7 +128,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**PermissionsExpandRequest**](PermissionsExpandRequest.md)|  | 
+ **body** | [**PermissionExpandBody**](PermissionExpandBody.md)|  | 
 
 ### Return type
 
@@ -162,8 +162,8 @@ lookup entity
 
 ```python
 import permify_async
+from permify_async.models.lookup_entity_body import LookupEntityBody
 from permify_async.models.permission_lookup_entity_response import PermissionLookupEntityResponse
-from permify_async.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
 from permify_async.rest import ApiException
 from pprint import pprint
 
@@ -179,7 +179,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
+    body = permify_async.LookupEntityBody() # LookupEntityBody | 
 
     try:
         # lookup entity
@@ -198,7 +198,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**PermissionsLookupEntityRequest**](PermissionsLookupEntityRequest.md)|  | 
+ **body** | [**LookupEntityBody**](LookupEntityBody.md)|  | 
 
 ### Return type
 
@@ -232,7 +232,7 @@ lookup entity stream
 
 ```python
 import permify_async
-from permify_async.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
+from permify_async.models.lookup_entity_stream_body import LookupEntityStreamBody
 from permify_async.models.stream_result_of_permission_lookup_entity_stream_response import StreamResultOfPermissionLookupEntityStreamResponse
 from permify_async.rest import ApiException
 from pprint import pprint
@@ -249,7 +249,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
+    body = permify_async.LookupEntityStreamBody() # LookupEntityStreamBody | 
 
     try:
         # lookup entity stream
@@ -268,7 +268,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**PermissionsLookupEntityRequest**](PermissionsLookupEntityRequest.md)|  | 
+ **body** | [**LookupEntityStreamBody**](LookupEntityStreamBody.md)|  | 
 
 ### Return type
 
@@ -302,8 +302,8 @@ lookup-subject
 
 ```python
 import permify_async
+from permify_async.models.lookup_subject_body import LookupSubjectBody
 from permify_async.models.permission_lookup_subject_response import PermissionLookupSubjectResponse
-from permify_async.models.permissions_lookup_subject_request import PermissionsLookupSubjectRequest
 from permify_async.rest import ApiException
 from pprint import pprint
 
@@ -319,7 +319,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.PermissionsLookupSubjectRequest() # PermissionsLookupSubjectRequest | 
+    body = permify_async.LookupSubjectBody() # LookupSubjectBody | 
 
     try:
         # lookup-subject
@@ -338,7 +338,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**PermissionsLookupSubjectRequest**](PermissionsLookupSubjectRequest.md)|  | 
+ **body** | [**LookupSubjectBody**](LookupSubjectBody.md)|  | 
 
 ### Return type
 
@@ -373,7 +373,7 @@ subject permission
 ```python
 import permify_async
 from permify_async.models.permission_subject_permission_response import PermissionSubjectPermissionResponse
-from permify_async.models.permissions_subject_permission_request import PermissionsSubjectPermissionRequest
+from permify_async.models.subject_permission_body import SubjectPermissionBody
 from permify_async.rest import ApiException
 from pprint import pprint
 
@@ -389,7 +389,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.PermissionsSubjectPermissionRequest() # PermissionsSubjectPermissionRequest | 
+    body = permify_async.SubjectPermissionBody() # SubjectPermissionBody | 
 
     try:
         # subject permission
@@ -408,7 +408,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**PermissionsSubjectPermissionRequest**](PermissionsSubjectPermissionRequest.md)|  | 
+ **body** | [**SubjectPermissionBody**](SubjectPermissionBody.md)|  | 
 
 ### Return type
 

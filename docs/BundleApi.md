@@ -19,7 +19,7 @@ delete bundle
 
 ```python
 import permify_async
-from permify_async.models.bundle_delete_request import BundleDeleteRequest
+from permify_async.models.bundle_delete_body import BundleDeleteBody
 from permify_async.models.bundle_delete_response import BundleDeleteResponse
 from permify_async.rest import ApiException
 from pprint import pprint
@@ -36,7 +36,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.BundleApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.BundleDeleteRequest() # BundleDeleteRequest | 
+    body = permify_async.BundleDeleteBody() # BundleDeleteBody | 
 
     try:
         # delete bundle
@@ -55,7 +55,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**BundleDeleteRequest**](BundleDeleteRequest.md)|  | 
+ **body** | [**BundleDeleteBody**](BundleDeleteBody.md)|  | 
 
 ### Return type
 
@@ -89,7 +89,7 @@ read bundle
 
 ```python
 import permify_async
-from permify_async.models.bundle_read_request import BundleReadRequest
+from permify_async.models.bundle_read_body import BundleReadBody
 from permify_async.models.bundle_read_response import BundleReadResponse
 from permify_async.rest import ApiException
 from pprint import pprint
@@ -106,7 +106,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.BundleApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.BundleReadRequest() # BundleReadRequest | 
+    body = permify_async.BundleReadBody() # BundleReadBody | 
 
     try:
         # read bundle
@@ -125,7 +125,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**BundleReadRequest**](BundleReadRequest.md)|  | 
+ **body** | [**BundleReadBody**](BundleReadBody.md)|  | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ write bundle
 
 ```python
 import permify_async
-from permify_async.models.bundle_write_request import BundleWriteRequest
+from permify_async.models.bundle_write_body import BundleWriteBody
 from permify_async.models.bundle_write_response import BundleWriteResponse
 from permify_async.rest import ApiException
 from pprint import pprint
@@ -176,7 +176,7 @@ async with permify_async.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify_async.BundleApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify_async.BundleWriteRequest() # BundleWriteRequest | 
+    body = permify_async.BundleWriteBody() # BundleWriteBody | 
 
     try:
         # write bundle
@@ -195,7 +195,7 @@ async with permify_async.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**BundleWriteRequest**](BundleWriteRequest.md)|  | 
+ **body** | [**BundleWriteBody**](BundleWriteBody.md)|  | 
 
 ### Return type
 

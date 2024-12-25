@@ -6,8 +6,8 @@ ExpandTreeNode represents a node in an expansion tree with a specific operation 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operation** | [**ExpandTreeNodeOperation**](ExpandTreeNodeOperation.md) |  | [optional] 
-**children** | [**List[Expand]**](Expand.md) |  | [optional] 
+**operation** | [**ExpandTreeNodeOperation**](ExpandTreeNodeOperation.md) |  | [optional] [default to ExpandTreeNodeOperation.UNSPECIFIED]
+**children** | [**List[V1Expand]**](V1Expand.md) |  | [optional] 
 
 ## Example
 
